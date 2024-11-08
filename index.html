@@ -1,20 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜數字遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <h1>flight的網頁</h1>
-    <img src="flightz.png" width="200">
-    
-    <h2>自我介紹</h2>
-    <p>哈囉！我是小明，我喜歡寫程式。</p>
-    
-    <h2>我的興趣</h2>
-    <ul>
-        <li>打籃球</li>
-        <li>聽音樂</li>
-        <li>寫程式</li>
-    </ul>
-    
-    <h2>聯絡方式</h2>
-    <p>Email: example@gmail.com</p>
-    <a href="https://www.cchs.chc.edu.tw/">CCHS</a>
+    <div class="game-container">
+        <h1>猜數字遊戲</h1>
+        <p>請猜一個 1 到 100 之間的數字。</p>
+        <input type="number" id="userInput" placeholder="輸入你的猜測" />
+        <button onclick="checkGuess()">猜一下！</button>
+        <p id="message"></p>
+        <p>剩餘次數: <span id="remainingAttempts">10</span></p>
+        <button id="restartBtn" onclick="restartGame()" style="display:none;">重新開始</button>
+    </div>
+
+    <script src="game.js"></script>
 </body>
 </html>
 
